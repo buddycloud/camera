@@ -1,6 +1,8 @@
 html, body {
   margin: 0;
   height: 100%;
+  font: 15px/27px sans-serif;
+  color: #333;
   background: #eee;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -29,14 +31,20 @@ html, body {
           box-pack: center;
 }
 
+.view {
+  display: none;
+}
+.visible {
+  display: block;
+}
 .preview {
   position: relative;
+  border-radius: 5px 5px 0 0;
+  background: #ddd;
 }
 #live {
   max-width: 100%;
-  border-radius: 5px 5px 0 0;
   vertical-align: bottom;
-  background: url(../testcat.jpg);
 }
 .preview:after {
   top: 0;
