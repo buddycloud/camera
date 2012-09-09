@@ -11,15 +11,14 @@ var $shutter = $(".shutter");
 var triggerFlash = function() {
   var $camera = $(".camera");
   var $overlay = $(".flash");
-  overlay.on(transEndEventName, function() {
+  $overlay.on(transEndEventName, function() {
     $camera.removeClass("action-shutterPressed");
-  });	
+  });
   $camera.addClass("action-shutterPressed");
-  document.redraw();
 };
 
 var shutterClick = function() {
   triggerFlash();
 };
 
-shutter.onclick = shutterClick;
+$shutter.on("click", shutterClick);
