@@ -1,6 +1,8 @@
 html, body {
   margin: 0;
   height: 100%;
+  font: 15px/27px sans-serif;
+  color: #333;
   background: #eee;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -29,31 +31,34 @@ html, body {
           box-pack: center;
 }
 
+.view {
+  display: none;
+}
+.visible {
+  display: block;
+}
 .preview {
   position: relative;
+  background: #ddd;
 }
 #live {
   max-width: 100%;
-  border-radius: 5px 5px 0 0;
   vertical-align: bottom;
-  background: url(../testcat.jpg);
 }
-.preview:after {
+.flash {
   top: 0;
-  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   background: white;
   opacity: 0;
-  border-radius: 5px 5px 0 0;
-  -webkit-transition: 120ms;
+  -webkit-transition: 200ms;
      -moz-transition: 120ms;
       -ms-transition: 120ms;
        -o-transition: 120ms;
           transition: 120ms;
 }
-.action-shutterPressed .preview:after {
+.action-shutterPressed .flash {
   opacity: 1;
 }
 
