@@ -13,20 +13,24 @@ navigator.webkitGetUserMedia({video: true},
 
 function getImg() {
 
-	var canvas = document.createElement("canvas").getContext("2d");
+	var canvas = document.createElement("canvas")
+  var ctx = canvas.getContext("2d");
 	var liveness = document.getElementById("live");
 
 	canvas.width = liveness.clientWidth;
 	canvas.height = liveness.clientHeight;
 
-	canvas.drawImage(liveness, 0, 0, canvas.width, canvas.height)
+	ctx.drawImage(liveness, 0, 0, canvas.width, canvas.height)
 
-	var img = document.createElement("img")
-    img.src = canvas.toDataURL("image/png")
-    img.width = canvas.width
-    img.height = canvas.height
+   var image = canvas.toDataURL("image/png")
 
-    canvas.appendChild(img)
+   var param = $.param({
+    "binaryfile": image
+       })
+
+    $.ajax("https://api.buddycloud.org/techcrunch@topics.buddycloud.org/media?" + param, {
+      type: "PUT"
+    })
 
 
 }
