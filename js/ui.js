@@ -22,3 +22,8 @@ var shutterClick = function() {
 };
 
 $shutter.on("click", shutterClick);
+
+var showCamera = function(){
+  $('.askForAccess').removeClass('visible');
+  $('.camera').addClass('visible');
+}
