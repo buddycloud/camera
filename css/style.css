@@ -52,14 +52,19 @@ html, body {
   height: 100%;
   background: white;
   opacity: 0;
-  -webkit-transition: 200ms;
-     -moz-transition: 120ms;
-      -ms-transition: 120ms;
-       -o-transition: 120ms;
-          transition: 120ms;
+  -webkit-transition: 500ms;
+     -moz-transition: 500ms;
+      -ms-transition: 500ms;
+       -o-transition: 500ms;
+          transition: 500ms;
 }
 .action-shutterPressed .flash {
   opacity: 1;
+  -webkit-transition: 60ms;
+     -moz-transition: 60ms;
+      -ms-transition: 60ms;
+       -o-transition: 60ms;
+          transition: 60ms;
 }
 
 .shutter {
