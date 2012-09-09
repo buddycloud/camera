@@ -19,6 +19,7 @@ var triggerFlash = function() {
 
 var shutterClick = function() {
   triggerFlash();
+  getImg();
 };
 
 $shutter.on("click", shutterClick);
