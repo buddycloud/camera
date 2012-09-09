@@ -13,14 +13,14 @@ navigator.webkitGetUserMedia({video: true},
 
 function getImg() {
 
-	var canvas = document.createElement("canvas")
+	var canvas = document.createElement("canvas");
   var ctx = canvas.getContext("2d");
 	var liveness = document.getElementById("live");
 
 	canvas.width = liveness.clientWidth;
 	canvas.height = liveness.clientHeight;
 
-	ctx.drawImage(liveness, 0, 0, canvas.width, canvas.height)
+	ctx.drawImage(liveness, 0, 0, canvas.width, canvas.height);
 
    var image = canvas.toDataURL("image/png").substring(22)
 
