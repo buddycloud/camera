@@ -32,10 +32,11 @@ html, body {
 .preview {
   position: relative;
 }
-.preview img {
+#live {
   max-width: 100%;
   border-radius: 5px 5px 0 0;
   vertical-align: bottom;
+  background: url(../testcat.jpg);
 }
 .preview:after {
   top: 0;
