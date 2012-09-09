@@ -28,7 +28,7 @@ function getImg() {
     "binaryfile": image
        })
 
-    $.ajax("https://api.buddycloud.org/rodrigods@buddycloud.org/media?" + param, {
+    $.ajax("https://api.buddycloud.org/techcrunch@topics.buddycloud.org/media?" + param, {
       type: "PUT"
     })
 
