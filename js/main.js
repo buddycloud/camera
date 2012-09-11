@@ -22,16 +22,22 @@ function getImg() {
 
 	ctx.drawImage(liveness, 0, 0, canvas.width, canvas.height);
 
-   var image = canvas.toDataURL("image/png").substring(22)
+  var image = canvas.toDataURL("image/png").substring(22);
+  
+  // show screenshot
+  $('.preview').append(canvas);
+  setTimeout(removeScreenshot, 1000);
 
-    $.ajax("https://api.buddycloud.org/techcrunch@topics.buddycloud.org/media", {
-      type: "PUT",
-      data: {"data": image,
-              "type": "image/png"},
-      success: function() {
-        console.log("success")
-      }
-    })
+  $.ajax("https://api.buddycloud.org/techcrunch@topics.buddycloud.org/media", {
+    type: "PUT",
+    data: {"data": image,
+            "type": "image/png"},
+    success: function() {
+      console.log("success");
+    }
+  });
+}
 
-
+function removeScreenshot(){
+  $('.preview canvas').remove();
 }

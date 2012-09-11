@@ -41,6 +41,11 @@ html, body {
   position: relative;
   background: #ddd;
 }
+  .preview canvas {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
 #live {
   max-width: 100%;
   vertical-align: bottom;
@@ -52,6 +57,7 @@ html, body {
   height: 100%;
   background: white;
   opacity: 0;
+  z-index: 1;
   -webkit-transition: 500ms;
      -moz-transition: 500ms;
       -ms-transition: 500ms;
