@@ -1,0 +1,91 @@
+.centered {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
+  display: box;
+  
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-box-align: center;
+       -o-box-align: center;
+          box-align: center;
+  
+  -webkit-box-pack: center;
+     -moz-box-pack: center;
+      -ms-box-pack: center;
+       -o-box-pack: center;
+          box-pack: center;
+}
+
+.view {
+  display: none;
+}
+.visible {
+  display: block;
+}
+.preview {
+  position: relative;
+  background: #ddd;
+}
+  .preview canvas {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+#live {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+.flash {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: 500ms;
+     -moz-transition: 500ms;
+      -ms-transition: 500ms;
+       -o-transition: 500ms;
+          transition: 500ms;
+}
+.action-shutterPressed .flash {
+  opacity: 1;
+  -webkit-transition: 60ms;
+     -moz-transition: 60ms;
+      -ms-transition: 60ms;
+       -o-transition: 60ms;
+          transition: 60ms;
+}
+
+.shutter {
+  padding: 8px;
+  background: hsl(89,75%,34%);
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+}
+  .shutter:active {
+    background: hsl(89,75%,28%);
+  }
+  .shutter:active .shutterButton {
+    top: 1px;
+    position: relative;
+    background: hsl(89,75%,38%);
+  }
+.shutterButton {
+  height: 50px;
+  width: 50px;
+  background: hsl(89,75%,44%);
+  border-radius: 25px;
+  position: relative;
+}
+.shutterButton:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url(glyphicons_011_camera.png) no-repeat center;
+  opacity: .5;
+}

@@ -1,21 +1,79 @@
-<!doctype html>
-<title>buddycloud camera</title>
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
 
-<body class="centered">
-  <div class="view askForAccess visible">Please allow us to access your camera!</div>
-  <div class="view camera">
-    <div class="preview">
-      <div class="flash"></div>
-    	<video id="live" autoplay></video>
-    </div>
-    <div class="shutter centered">
-      <div class="shutterButton"></div>
-    </div>
-  </div>
-  <script src="js/modernizr.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/ui.js"></script>
+
+	<!-- General meta information -->
+	<title>buddycloud camera login</title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<meta name="robots" content="index, follow" />
+	<meta charset="utf-8" />
+	<!-- // General meta information -->
+	
+	
+	<!-- Load Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<!-- // Load Javascipt -->
+
+	<!-- Load stylesheets -->
+	<link type="text/css" rel="stylesheet" href="css/style.css" media="screen" />
+	<link type="text/css" rel="stylesheet" href="css/camera.css" media="screen" />
+	<!-- // Load stylesheets -->
+	
+<script>
+  var apiUrl = "https://api.buddycloud.org";
+  var domain = "buddycloud.org";
+
+	$(document).ready(function(){
+  	$("#submit1").hover(
+  	function() {
+    	$(this).animate({"opacity": "0"}, "slow");
+  	},
+  	function() {
+    	$(this).animate({"opacity": "1"}, "slow");
+  	});
+ 	});
+</script>
+	
+</head>
+<body>
+	<div id="wrapper">
+		<div id="wrappertop"></div>
+		<div id="wrappermiddle">
+			<h2>Login</h2>
+			<div id="username_input">
+				<div id="username_inputleft"></div>
+				<div id="username_inputmiddle">
+				<form>
+					<input class="bc_jid" type="text" name="link" id="url" placeholder="personal channel">
+				</form>
+				</div>
+				<div id="username_inputright"></div>
+			</div>
+
+			<div id="password_input">
+				<div id="password_inputleft"></div>
+				<div id="password_inputmiddle">
+				<form>
+					<input class="bc_password" type="password" name="link" id="url" placeholder="password">
+				</form>
+				</div>
+				<div id="password_inputright"></div>
+			</div>
+
+			<div id="submit">
+				<input type="image" src="./images/submit_hover.png" id="submit1" value="Sign In">
+				<input type="image" src="./images/submit.png" id="submit2" value="Sign In">
+			</div>
+		</div>
+
+		<div id="wrapperbottom"></div>
+		
+		<div id="powered">
+		<p>Powered by <a href="buddycloud.com">buddycloud</a></p>
+		</div>
+	</div>
+  <script type="text/javascript" src="js/login.js"></script>
 </body>
+</html>
